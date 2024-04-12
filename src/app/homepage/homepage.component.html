@@ -1,1 +1,10 @@
-<p>homepage works!</p>
+<section>
+  <h1>Welcome To Blangular</h1>
+  <p>Blog for Self Directed Learning</p>
+</section>
+<section>
+  <app-post-thumbnail
+  *ngFor="let post of postList"
+  [postSkeleton]="post">
+  </app-post-thumbnail>
+</section>

@@ -2,10 +2,11 @@ import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PostService } from '../post.service';
 import { PostSkeleton } from '../post-skeleton';
+import { PostThumbnailComponent } from '../post-thumbnail/post-thumbnail.component';
 @Component({
   selector: 'app-homepage',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, PostThumbnailComponent],
   templateUrl: './homepage.component.html',
   styleUrl: './homepage.component.css',
 })

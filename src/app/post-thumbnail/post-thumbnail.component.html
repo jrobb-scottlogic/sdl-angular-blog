@@ -1,0 +1,15 @@
+<h4>{{postSkeleton.title}}</h4>
+<div class="thumb-container">
+  <div class="image-container">
+    <img src="https://picsum.photos/150" alt="">
+  </div>
+  <div class="body-container">
+    <p>{{postSkeleton.body.substr(0,300)}}...</p>
+    <p>{{postSkeleton.date}}</p>
+  </div>
+</div>
+<div class="tag-container">
+  <app-tag *ngFor="let tag of postSkeleton.tags" [tag]="tag"></app-tag>
+</div>
+
+

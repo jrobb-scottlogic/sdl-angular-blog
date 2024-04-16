@@ -37,8 +37,8 @@ export class PostService {
     return this.postsList;
   }
 
-  getHousingLocationById(id: number): PostSkeleton | undefined {
-    return this.postsList.find((housingLocation) => housingLocation.id === id);
+  getPostById(id: number): PostSkeleton | undefined {
+    return this.postsList.find((PostSkeleton) => PostSkeleton.id === id);
   }
 
   constructor() {}

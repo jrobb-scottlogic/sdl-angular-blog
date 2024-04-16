@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { PostSkeleton } from '../post-skeleton';
+import { PostService } from './../post.service';
 
 @Component({
   selector: 'app-post',
@@ -9,5 +10,11 @@ import { PostSkeleton } from '../post-skeleton';
   styleUrl: './post.component.css',
 })
 export class PostComponent {
-  @Input() postSkeleton!: PostSkeleton;
+  post: PostSkeleton | undefined;
+  postService: PostService = inject(PostService);
+
+  constructor() {
+    const id = 1;
+    this.post = this.postService!.getPostById(id);
+  }
 }

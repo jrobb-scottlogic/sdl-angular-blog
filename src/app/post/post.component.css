@@ -1,0 +1,19 @@
+
+
+#main {
+  width: 800px;
+  margin: 0 auto;
+
+}
+h1 {
+  color: #79A9D1;
+  text-align: center;
+  font-weight: bold;
+}
+h2{
+  font-size: x-small;
+  font-weight: lighter;
+}
+p{
+  text-align: justify;
+}

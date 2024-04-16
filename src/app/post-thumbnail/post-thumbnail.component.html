@@ -8,7 +8,8 @@
     <p>{{postSkeleton.date}}</p>
   </div>
 </div>
-<ul>
-  <li *ngFor="let tag of postSkeleton.tags">{{tag}}</li>
-</ul>
+<div class="tag-container">
+  <app-tag *ngFor="let tag of postSkeleton.tags" [tag]="tag"></app-tag>
+</div>
+
 

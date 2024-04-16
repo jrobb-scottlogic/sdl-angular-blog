@@ -38,4 +38,12 @@ h4{
   padding-left: 1em;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+}
+
+.tag-container{
+  display: flex;
+  margin-left: 0.2em;
+  margin-top: 1em;
+  padding: 0;
 }

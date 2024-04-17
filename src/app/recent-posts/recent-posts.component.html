@@ -1,0 +1,7 @@
+<div class="title">
+  <h1>latest posts</h1>
+</div>
+<div class="posts">
+  <app-post-thumbnail *ngFor="let post of postList" [postSkeleton]="post">
+  </app-post-thumbnail>
+</div>

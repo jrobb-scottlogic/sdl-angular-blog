@@ -8,7 +8,7 @@ body {
 
 .nav {
   width: 100%;
-  background-color: #4d4d4d;
+  background-color: #1f1f1f;
   font-family: 'segoe ui';
   position: relative;
   display: flex;
@@ -61,6 +61,8 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 10em;
 }
 
 @media (max-width:600px) {

@@ -37,8 +37,18 @@ export class PostService {
     return this.postsList;
   }
 
+  // getId(): PostSkeleton[] {
+  //   return this.
+  // }
+
   getPostById(id: number): PostSkeleton | undefined {
-    return this.postsList.find((PostSkeleton) => PostSkeleton.id === id);
+    console.log("id in service", id);
+    // console.log(this.postsList.find(0)?.id);
+
+    console.log(this.postsList.find((PostSkeleton) => PostSkeleton?.id === id));
+    console.log(this.postsList.find((PostSkeleton) => PostSkeleton.id == id));
+    // WHY == and not ===  ????????
+    return this.postsList.find((PostSkeleton) => PostSkeleton.id == id);
   }
 
   constructor() {}

@@ -20,7 +20,7 @@ export class PostService {
       title: 'Ipsum',
       body: 'ut commodo. Aenean ornare ipsum quis faucibus suscipit. Pellentesque tincidunt efficitur ex, varius vestibulum libero condimentum eu. Nulla imperdiet semper turpis et rutrum. Ut sed lacus sed dui pellentesque efficitur. Donec vitae lorem id metus pulvinar venenatis quis id leo. ',
       thumbnailUrl: 'http//',
-      date: '10/4/2024',
+      date: '11/4/2024',
       tags: ['lorem', 'ipsum'],
     },
     {
@@ -28,7 +28,7 @@ export class PostService {
       title: 'Bapsum',
       body: 'Sed feugiat diam nec ante mattis vestibulum. Suspendisse semper malesuada leo, non rhoncus lacus posuere faucibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae',
       thumbnailUrl: 'http//',
-      date: '11/4/2024',
+      date: '10/4/2024',
       tags: ['tempus', 'ipsum', 'lorem'],
     },
   ];
@@ -42,7 +42,7 @@ export class PostService {
   // }
 
   getPostById(id: number): PostSkeleton | undefined {
-    console.log("id in service", id);
+    console.log('id in service', id);
     // console.log(this.postsList.find(0)?.id);
 
     console.log(this.postsList.find((PostSkeleton) => PostSkeleton?.id === id));

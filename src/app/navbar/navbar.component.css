@@ -1,3 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400..700;1,400..700&display=swap');
+
+.gelasio-500 {
+  font-family: "Gelasio", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style:oblique;
+  font-size: 2em;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -28,7 +40,6 @@ body {
 .nav-title a{
   text-decoration: none;
   color: white;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
 .nav > .nav-btn {

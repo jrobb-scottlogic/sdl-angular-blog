@@ -1,0 +1,13 @@
+:host{
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+  margin: auto;
+
+}
+
+h1{
+  text-transform: uppercase;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-decoration: underline;
+}

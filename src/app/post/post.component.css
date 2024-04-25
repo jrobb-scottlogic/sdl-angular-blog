@@ -1,9 +1,8 @@
-
-
-#main {
+:host{
   width: 800px;
-  margin: 0 auto;
-
+  margin: 1em auto;
+  display: flex;
+  flex-direction: column;
 }
 h1 {
   color: #79A9D1;

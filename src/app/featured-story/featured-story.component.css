@@ -1,0 +1,25 @@
+:host{
+  display: flex;
+  background-image: url('https://picsum.photos/1920/500');
+  height: 500px;
+  align-items: flex-end;
+  justify-content: flex-start;
+  width: 66%;
+  background-color: blueviolet;
+  border: 2px solid black;
+  margin-top: 1em;
+}
+
+.blurb{
+  background: #fffdf1;
+  width: 30%;
+  height: 50%;
+  padding-left: 1em;
+  border-top: 2px black solid;
+  border-right: 2px black solid;
+}
+
+h1{
+  font-size: 3em;
+  font-style: oblique;
+}

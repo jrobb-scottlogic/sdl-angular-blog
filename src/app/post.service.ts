@@ -37,9 +37,9 @@ export class PostService {
     return this.postsList;
   }
 
-  // getId(): PostSkeleton[] {
-  //   return this.
-  // }
+  getFeaturedPost(): PostSkeleton | undefined {
+    return this.postsList.at(0);
+  }
 
   getPostById(id: number): PostSkeleton | undefined {
     console.log('id in service', id);

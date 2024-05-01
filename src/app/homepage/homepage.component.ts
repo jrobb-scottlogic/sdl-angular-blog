@@ -17,6 +17,8 @@ export class HomepageComponent {
   postService: PostService = inject(PostService);
 
   constructor() {
-    this.featured = this.postService.getFeaturedPost();
+    this.postService
+      .getFeaturedPost()
+      .subscribe((data) => (this.featured = data));
   }
 }

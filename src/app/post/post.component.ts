@@ -18,14 +18,12 @@ export class PostComponent {
     let id = this.route.snapshot.params['id'];
     // console.log("id",id);
 
-    this.post = this.postService!.getPostById(id);
+    this.postService!.getPostById(id).subscribe((data) => (this.post = data));
     // console.log("post",this.post);
-
-
   }
   // constructor() {
   //   // const id = 1;
   //   this.post = this.postService!.getPostById(id);
   // }
-  constructor(private route : ActivatedRoute){}
+  constructor(private route: ActivatedRoute) {}
 }

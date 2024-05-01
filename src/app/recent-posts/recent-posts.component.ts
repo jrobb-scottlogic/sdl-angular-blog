@@ -16,6 +16,8 @@ export class RecentPostsComponent {
   postService: PostService = inject(PostService);
 
   constructor() {
-    this.postList = this.postService.getAllPosts();
+    this.postService.getAllPosts().subscribe((data) => {
+      this.postList = data;
+    });
   }
 }

@@ -1,16 +1,16 @@
 :host{
   display: flex;
-  background-color: rgb(255, 255, 255);
   color: black;
   justify-content: center;
   width: 4em;
   padding: 0em;
   margin-right: 0.25em;
-  border-radius: 0.2em;
-  border: black solid 0.15em;
+  border: black solid 2px;
 }
 
 p{
   margin: 0.2em;
   padding: 0;
+  text-transform: uppercase;
+  font-style: italic;
 }

@@ -2,11 +2,13 @@ import { Component, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { PostSkeleton } from '../post-skeleton';
 import { PostService } from './../post.service';
+import { TagComponent } from '../tag/tag.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-post',
   standalone: true,
-  imports: [],
+  imports: [CommonModule, TagComponent],
   templateUrl: './post.component.html',
   styleUrl: './post.component.css',
 })

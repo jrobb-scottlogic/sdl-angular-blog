@@ -1,11 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400..700;1,400..700&display=swap');
+
 :host{
   display: flex;
   flex-direction: column;
   width: 66%;
+  margin-top: 2em;
 }
 
 h1{
-  text-transform: uppercase;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  text-decoration: underline;
+  text-transform: capitalize;
+  font-size: 2.5em;
+  font-family: "Gelasio", serif;
+  font-style: italic;
+}
+
+.title{
+  display: flex;
+  width: 100%;
+  justify-content: start;
 }

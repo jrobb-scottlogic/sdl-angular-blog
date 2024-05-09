@@ -1,0 +1,9 @@
+<form [formGroup]="authorForm" (ngSubmit)="onSubmit()">
+  <label for="title">Title:</label>
+  <input required type="text" id="title" formControlName="title">
+
+  <label for="body">Body:</label>
+  <textarea required name="body" id="body" formControlName="body"></textarea>
+
+  <button [disabled]="!authorForm.valid" type="submit">Click me!</button>
+</form>

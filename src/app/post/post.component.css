@@ -15,7 +15,7 @@ h1 {
 
 p{
   text-align: justify;
-  -ms-text-justify:inter-cluster;
+  text-justify: inter-word;
   line-height: 1.7em;
   font-size: large;
 }

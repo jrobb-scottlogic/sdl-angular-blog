@@ -7,6 +7,11 @@
   border-left: #000 solid 0.15em;
 }
 
+:host:hover{
+  border-left: rgb(177, 0, 0) solid 0.25em;
+  cursor: pointer;
+}
+
 h4{
   font-size: 1.5em;
   margin: 0.1em;
@@ -20,10 +25,6 @@ a{
 .thumb-container{
   display: flex;
   justify-content: flex-start;
-}
-
-.thumb-container:hover{
-  cursor: pointer;
 }
 
 .image-container{

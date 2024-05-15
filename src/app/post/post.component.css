@@ -41,3 +41,6 @@ img{
   flex-direction: row;
 }
 
+.body{
+  line-break: anywhere;
+}

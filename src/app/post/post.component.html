@@ -6,8 +6,8 @@
   <p>{{post?.body}}</p>
 </div>
 <div class="footer">
-  <p>Author Name | {{post?.date}}</p>
+  <p>Author Name | {{post?.date | date:'mediumDate'}}</p>
   <div class="tags">
-    <app-tag *ngFor="let tag of post!.tags" [tag]="tag"></app-tag>
+    <app-tag *ngFor="let tag of post?.tags" [tag]="tag"></app-tag>
   </div>
 </div>

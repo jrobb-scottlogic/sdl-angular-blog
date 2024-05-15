@@ -6,8 +6,9 @@ import { AuthorPageComponent } from './author-page/author-page.component';
 
 export const routes: Routes = [
   { path: 'article/:id', component: PostComponent },
-  { path: '', component: HomepageComponent },
+  { path: 'home', component: HomepageComponent },
   { path: 'author', component: AuthorPageComponent },
+  { path: '**', redirectTo: '/home', pathMatch: 'full' },
 ];
 
 @NgModule({

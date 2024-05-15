@@ -8,12 +8,6 @@ import { AuthorFormSkeleton } from './author-form-skeleton';
   providedIn: 'root',
 })
 export class PostService {
-  httpOptions = {
-    headers: new HttpHeaders({
-      'Content-Type': 'application/json',
-    }),
-  };
-
   getAllPosts(): Observable<PostSkeleton[]> {
     return this.http.get<PostSkeleton[]>('http://localhost:8080/api/post/all');
   }
@@ -28,11 +22,10 @@ export class PostService {
     );
   }
 
-  addNewPost(post: AuthorFormSkeleton): Observable<PostSkeleton> {
+  addNewPost(post: AuthorFormSkeleton) {
     return this.http.post<PostSkeleton>(
-      'http://localhost:8080/api/post/new/',
-      post,
-      this.httpOptions
+      'http://localhost:8080/api/post/new',
+      post
     );
   }
 

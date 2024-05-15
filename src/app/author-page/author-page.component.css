@@ -1,0 +1,17 @@
+:host{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Gelasio", serif;
+}
+h1{
+  font-size: 2.5em;
+  font-style: italic;
+}
+
+.form-container{
+  width: 66%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+}

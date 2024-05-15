@@ -13,6 +13,8 @@ export class AuthorPageComponent {
   postService: PostService = inject(PostService);
 
   handleSubmit(outputForm: AuthorFormSkeleton) {
-    this.postService.addNewPost(outputForm);
+    this.postService
+      .addNewPost(outputForm)
+      .subscribe((data) => console.log(data));
   }
 }

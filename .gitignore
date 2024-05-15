@@ -43,7 +43,7 @@ Thumbs.db
 
 HELP.md
 backend/target/
-!backend/.mvn/wrapper/maven-wrapper.jar
+#!backend/.mvn/wrapper/maven-wrapper.jar
 !backend/**/src/main/**/target/
 !backend/**/src/test/**/target/
 

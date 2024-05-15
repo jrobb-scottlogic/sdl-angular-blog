@@ -1,12 +1,12 @@
-<h4><a [routerLink]="['/article', postSkeleton!.id]" >{{postSkeleton!.title}}</a> </h4>
-<div class="thumb-container">
+<div class="thumb-container" [routerLink]="['/article', postSkeleton!.id]">
   <div class="image-container">
-    <img src="https://picsum.photos/150" alt="">
+    <img src="https://picsum.photos/700/" alt="">
   </div>
   <div class="body-container">
+    <h4>{{postSkeleton!.title}}</h4>
     <div class="text-container">
       <p>{{postSkeleton!.body.substr(0,300)}}...</p>
-      <p>{{postSkeleton!.date}}</p>
+      <p>{{postSkeleton!.date| date:'mediumDate'}}</p>
     </div>
     <div class="tag-container">
       <app-tag *ngFor="let tag of postSkeleton!.tags" [tag]="tag"></app-tag>

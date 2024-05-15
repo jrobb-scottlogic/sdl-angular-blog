@@ -1,0 +1,21 @@
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
+}
+
+input{
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+textarea{
+  width: 100%;
+  height: 500px;
+  resize: none;
+  scroll-behavior: smooth;
+  margin-bottom: 1em;
+}
+
+

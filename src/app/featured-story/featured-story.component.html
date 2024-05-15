@@ -1,4 +1,10 @@
-<div class="blurb" [routerLink]="['/article', featuredPost!.id]" >
-  <h1>{{featuredPost?.title}}</h1>
-  <p>{{featuredPost?.body?.slice(0,100)}}...</p>
+
+<h1 id="title">Featured this issue</h1>
+<div class="jumbotron">
+  <div class="blurb" [routerLink]="['/article', featuredPost?.id]">
+    <h1>{{featuredPost?.title}}</h1>
+    <p>{{featuredPost?.body?.slice(0,100)}}...</p>
+  </div>
 </div>
+
+

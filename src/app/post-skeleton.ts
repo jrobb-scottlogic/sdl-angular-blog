@@ -3,6 +3,6 @@ export interface PostSkeleton {
   title: string;
   body: string;
   thumbnailUrl: string;
-  date: string;
+  date: Date;
   tags: string[];
 }

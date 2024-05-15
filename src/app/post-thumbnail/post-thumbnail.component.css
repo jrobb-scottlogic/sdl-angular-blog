@@ -2,11 +2,14 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 2em;
-  padding-bottom: 0.5em;
   padding-left: 1em;
   padding-right: 1em;
+  border-left: #000 solid 0.15em;
+}
 
-  border-left: #000 solid 0.2em;
+:host:hover{
+  border-left: rgb(177, 0, 0) solid 0.25em;
+  cursor: pointer;
 }
 
 h4{
@@ -22,20 +25,18 @@ a{
 .thumb-container{
   display: flex;
   justify-content: flex-start;
-
 }
 
 .image-container{
-  width: 24%;
+  width: 15%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 0.2em;
 }
 
 .image-container img {
-  border: 0.2em black solid;
-  width: 98%;
+  border: 0.15em black solid;
+  width: 100%;
 }
 
 .body-container{
@@ -44,14 +45,19 @@ a{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-bottom: 1em;
-
 }
 
 .text-container{
   flex-direction: column;
   display: flex;
   justify-content: space-between;
+  line-break: anywhere;
+  height: 100%;
+}
+
+.text-container p {
+  margin: 0;
+  margin-bottom: 1em;
 }
 
 .tag-container{

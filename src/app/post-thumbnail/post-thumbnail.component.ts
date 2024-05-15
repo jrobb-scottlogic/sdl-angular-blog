@@ -18,6 +18,8 @@ export class PostThumbnailComponent {
 
   @Input()
   set id(id: number) {
-    this.postSkeleton = this.postService.getPostById(id);
+    this.postService
+      .getPostById(id)
+      .subscribe((data) => (this.postSkeleton = data));
   }
 }

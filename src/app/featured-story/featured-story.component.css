@@ -1,13 +1,28 @@
 :host{
   display: flex;
+  width: 66%;
+  flex-direction: column;
+  margin-top:2em ;
+}
+
+#title{
+  text-transform: capitalize;
+  font-size: 2.5em;
+  font-family: "Gelasio", serif;
+  font-style: italic;
+  margin: 0;
+  margin-bottom: 0.1em;
+}
+
+.jumbotron{
+  display: flex;
   background-image: url('https://picsum.photos/1920/500');
   height: 500px;
   align-items: flex-end;
   justify-content: flex-start;
-  width: 66%;
+  width: 100%;
   background-color: blueviolet;
   border: 2px solid black;
-  margin-top: 1em;
 }
 
 .blurb{
@@ -15,11 +30,18 @@
   width: 30%;
   height: 50%;
   padding-left: 1em;
+  padding-right: 1em;
   border-top: 2px black solid;
   border-right: 2px black solid;
 }
 
-h1{
-  font-size: 3em;
+.blurb h1{
+  font-size: 2em;
   font-style: oblique;
+}
+
+.blurb:hover{
+  cursor: pointer;
+  background-color: rgb(177, 0, 0);
+  color: #fffdf1;;
 }

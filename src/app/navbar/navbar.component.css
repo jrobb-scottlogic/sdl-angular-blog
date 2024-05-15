@@ -1,13 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400..700;1,400..700&display=swap');
-
 .gelasio-500 {
   font-family: "Gelasio", serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style:oblique;
-  font-size: 2em;
+  font-size: 3em;
   text-transform: uppercase;
-  text-decoration: underline;
+  margin-bottom: 0em;
+  color: white;
+  border-bottom: white solid 2px;
+}
+
+h5{
+  font-family: "Gelasio", serif;
+  font-weight: 100;
+  margin-top: 1em;
+  color: white;
 }
 
 * {
@@ -29,17 +36,13 @@ body {
 }
 
 .nav > .nav-header > .nav-title {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  font-size: 22px;
-  color: #fff;
-  padding: 10px 10px 10px 10px;
-
 }
 
-.nav-title a{
-  text-decoration: none;
-  color: white;
+.nav-title:hover{
+  cursor: pointer;
 }
 
 .nav > .nav-btn {

@@ -9,8 +9,13 @@
 }
 
 :host:hover{
-  background-color: red;
+  background-color: rgb(177, 0, 0);
 }
+
+:host:hover a{
+  color:white;
+}
+
 p{
   margin: 0.2em;
   padding: 0;

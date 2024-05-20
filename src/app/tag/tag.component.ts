@@ -10,4 +10,7 @@ import { RouterLink } from '@angular/router';
 })
 export class TagComponent {
   @Input() tag!: string;
+  stop(event: Event) {
+    event.stopPropagation();
+  }
 }

@@ -1,6 +1,6 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { PostService } from '../post.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { PostSkeleton } from '../post-skeleton';
 import { CommonModule } from '@angular/common';
 import { PostThumbnailComponent } from '../post-thumbnail/post-thumbnail.component';
@@ -16,7 +16,11 @@ export class TagPageComponent {
   postList: PostSkeleton[];
   tag: String;
 
-  constructor(private route: ActivatedRoute, private postService: PostService) {
+  constructor(
+    private route: ActivatedRoute,
+    private postService: PostService,
+    private router: Router
+  ) {
     this.postList = [];
     this.tag = '';
     this.route.paramMap.subscribe((params) => {
@@ -28,7 +32,7 @@ export class TagPageComponent {
     this.tag = this.route.snapshot.params['tag'];
     this.postService.getPostsByTag(this.tag).subscribe((data) => {
       if (data.length == 0) {
-        console.log('Not valid tag - redirect to homepage');
+        this.router.navigate(['home']);
       } else {
         this.postList = data;
       }

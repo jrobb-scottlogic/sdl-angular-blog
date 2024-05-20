@@ -90,7 +90,7 @@ public class PostService {
             outputList.add(outputDto);
           }
         }else{
-          throw new RuntimeException("No posts with matching tag");
+          return outputList;
         }
         return outputList;
       }catch (Exception e){

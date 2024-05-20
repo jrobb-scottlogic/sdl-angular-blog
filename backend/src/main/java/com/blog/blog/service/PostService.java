@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -69,6 +70,32 @@ public class PostService {
         catch(Exception e){
             throw new RuntimeException("Failed to fetch post by id: " + e.getMessage());
         }
+    }
+
+    public List<PostOutputDto> fetchPostsByTag(String tag){
+      try {
+        List<PostOutputDto> outputList = new ArrayList<>();
+        List<Tag> matchingPosts = tagRepository.findAllByTag(tag);
+        if (!matchingPosts.isEmpty()){
+          for (Tag post: matchingPosts) {
+            Post tempPost = post.getPost();
+            PostOutputDto outputDto = PostOutputDto.builder()
+              .id(tempPost.getId())
+              .title(tempPost.getTitle())
+              .body(tempPost.getBody())
+              .date(tempPost.getDate())
+              .thumbnailUrl(tempPost.getThumbnailUrl())
+              .tags(tagRepository.findAllByPost(tempPost).stream().map(Tag::getTag).collect(Collectors.toList()))
+              .build();
+            outputList.add(outputDto);
+          }
+        }else{
+          return outputList;
+        }
+        return outputList;
+      }catch (Exception e){
+        throw new RuntimeException("Failed to fetch posts by tag: " + e.getMessage());
+      }
     }
 
     public List<PostOutputDto> fetchAllPosts(){

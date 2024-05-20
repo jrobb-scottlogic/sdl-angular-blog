@@ -2,10 +2,18 @@
   display: flex;
   color: black;
   justify-content: center;
-  width: 4em;
+  width: fit-content;
   padding: 0em;
   margin-right: 0.25em;
   border: black solid 2px;
+}
+
+:host:hover{
+  background-color: rgb(177, 0, 0);
+}
+
+:host:hover a{
+  color:white;
 }
 
 p{
@@ -13,4 +21,9 @@ p{
   padding: 0;
   text-transform: uppercase;
   font-style: italic;
+}
+
+a{
+  text-decoration: none;
+  color: black;
 }

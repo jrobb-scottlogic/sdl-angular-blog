@@ -8,4 +8,6 @@ import java.util.List;
 
 public interface TagRepository extends JpaRepository<Tag, Integer> {
     List<Tag> findAllByPost(Post post);
+
+    List<Tag> findAllByTag(String tag);
 }

@@ -22,6 +22,12 @@ export class PostService {
     );
   }
 
+  getPostsByTag(tag: String): Observable<PostSkeleton[]> {
+    return this.http.get<PostSkeleton[]>(
+      'http://localhost:8080/api/post/tag/' + tag
+    );
+  }
+
   addNewPost(post: AuthorFormSkeleton) {
     return this.http.post<PostSkeleton>(
       'http://localhost:8080/api/post/new',

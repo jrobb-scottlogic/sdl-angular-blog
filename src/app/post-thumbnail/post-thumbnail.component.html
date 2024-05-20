@@ -1,10 +1,10 @@
-<div class="thumb-container" [routerLink]="['/article', postSkeleton!.id]">
-  <div class="image-container">
+<div class="thumb-container" >
+  <div class="image-container" [routerLink]="['/article', postSkeleton!.id]">
     <img src="https://picsum.photos/700/" alt="">
   </div>
   <div class="body-container">
-    <h4>{{postSkeleton!.title}}</h4>
-    <div class="text-container">
+    <h4><a [routerLink]="['/article', postSkeleton!.id]">{{postSkeleton!.title}}</a></h4>
+    <div class="text-container" [routerLink]="['/article', postSkeleton!.id]">
       <p>{{postSkeleton!.body.substr(0,300)}}...</p>
       <p>{{postSkeleton!.date| date:'mediumDate'}}</p>
     </div>

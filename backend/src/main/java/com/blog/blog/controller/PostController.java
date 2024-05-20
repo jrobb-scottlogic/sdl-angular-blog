@@ -31,6 +31,12 @@ public class PostController {
         PostOutputDto post = postService.fetchPostById(Integer.parseInt(id));
         return ResponseEntity.ok(post);
     }
+
+    @GetMapping("/tag/{tag}")
+    public ResponseEntity<List<PostOutputDto>> getPostByTag(@PathVariable String tag) {
+      List<PostOutputDto> posts = postService.fetchPostsByTag(tag);
+      return ResponseEntity.ok(posts);
+    }
     @PostMapping("/new")
     public ResponseEntity<PostOutputDto> addNewPost(@RequestBody PostInputDto userInput){
         Post post = Post.builder()

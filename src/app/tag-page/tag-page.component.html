@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="title">
+    <h1>Explore articles related to "{{tag}}"</h1>
+  </div>
+  <div class="posts">
+    <app-post-thumbnail *ngFor="let post of postList" [postSkeleton]="post">
+    </app-post-thumbnail>
+  </div>
+</div>

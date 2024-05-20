@@ -1,9 +1,17 @@
 <div class="container">
   <div class="title">
-    <h1>Explore articles related to "{{tag}}"</h1>
+    <h1>Exploring articles related to "{{tag}}"</h1>
   </div>
-  <div class="posts">
-    <app-post-thumbnail *ngFor="let post of postList" [postSkeleton]="post">
-    </app-post-thumbnail>
+  <div class="posts" *ngIf="exists; then tagExists else tagDoesNotExist">
   </div>
 </div>
+
+<ng-template #tagExists>
+  <app-post-thumbnail *ngFor="let post of postList" [postSkeleton]="post">
+  </app-post-thumbnail>
+</ng-template>
+
+<ng-template #tagDoesNotExist>
+  <p>No articles exist which match the search tag "{{tag}}"</p>
+  <p><a [routerLink]="['home']">Go to homepage</a></p>
+</ng-template>
